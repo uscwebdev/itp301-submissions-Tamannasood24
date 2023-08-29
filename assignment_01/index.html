@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Assignment 1 | Image Gallery </title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+</head>
+<style>
+
+.thumbnail img {
+	height: 150px;
+	width: 150px;
+	border: 2px black solid;
+	margin-right: 2px;
+}
+
+h1{
+	font-family: 'Righteous', cursive;
+	font-size: 80px;
+	color:;
+
+}
+
+#float{
+	float: left;
+}
+
+#main_image img {
+	border:2px black solid;
+	height: 625px;
+	width:650px;
+	margin-left: 20px;
+}
+
+#main_image{
+	float:left;
+}
+</style>
+
+<body>
+
+<div id="header">
+	<h1> Fruit Gallery </h1>
+</div>
+<div id="float">
+	<div class="thumbnail">
+		<img src="img/apple.png" id="apple" alt="Image of clipart smiling red apple.">
+	</div>
+
+	<div class="thumbnail">
+		<img src="img/banana.png" id="banana" alt="Image of clipart smiling yellow banana.">
+	</div>
+
+	<div class="thumbnail">
+		<img src="img/orange.png" id="orange" alt="Image of clipart smiling orange.">
+	</div>
+
+	<div class="thumbnail">
+		<img src="img/strawberry.png" id="strawberry" alt="Image of clipart smiling red strawberry.">
+	</div>
+</div>
+	<div id="main_image">
+		<img src="img/mango.png" id="mango" alt="Image of clipart smiling yellow mango.">
+	</div>
+
+</body>
+
+	<script>
+		document.querySelector("#apple").onclick = function(){
+			document.querySelector("#mango").src = "img/apple.png"
+			document.querySelector("#mango").alt ="Image of clipart smiling red apple"
+		}
+
+		document.querySelector("#banana").onclick = function(){
+			document.querySelector("#mango").src = "img/banana.png"
+			document.querySelector("#mango").alt ="Image of clipart smiling yellow banana."
+		}
+
+		document.querySelector("#orange").onclick = function(){
+			document.querySelector("#mango").src = "img/orange.png"
+			document.querySelector("#mango").alt ="Image of clipart smiling orange."
+		}
+
+		document.querySelector("#strawberry").onclick = function(){
+			document.querySelector("#mango").src = "img/strawberry.png"
+			document.querySelector("#mango").alt ="Image of clipart smiling red strawberry."
+		}
+
+		document.querySelector("#mango").onclick = function(){
+			document.querySelector("#mango").src = "img/mango.png"
+			document.querySelector("#mango").alt ="Image of clipart smiling yellow mango."
+		}
+
+	</script>
+
+
+</html>
