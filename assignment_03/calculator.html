@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+	<style>
+		#display {
+			font-size: 2em;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h1 class="col-12 text-center mt-5">JS Calculator</h1>
+		</div> <!-- .row -->
+		<div class="row">
+			<div id="calculator" class="mt-4 col-12 col-md-6 ml-md-auto mr-md-auto col-lg-4">
+				<div class="row">
+					<input type="text" id="display" class="col-12 text-right form-control" value="0">
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="clear" class="col-9 btn btn-lg btn-outline-dark">AC</button>
+					<button id="divide" class="col-3 btn btn-lg btn-outline-dark">/</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="seven" class="col-3 btn btn-lg btn-outline-dark">7</button>
+					<button id="eight" class="col-3 btn btn-lg btn-outline-dark">8</button>
+					<button id="nine" class="col-3 btn btn-lg btn-outline-dark">9</button>
+					<button id="multiply"  class="col-3 btn btn-lg btn-outline-dark">x</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="four" class="col-3 btn btn-lg btn-outline-dark">4</button>
+					<button id="five" class="col-3 btn btn-lg btn-outline-dark">5</button>
+					<button id="six" class="col-3 btn btn-lg btn-outline-dark">6</button>
+					<button id="subtract" class="col-3 btn btn-lg btn-outline-dark">-</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="one" class="col-3 btn btn-lg btn-outline-dark">1</button>
+					<button id="two" class="col-3 btn btn-lg btn-outline-dark">2</button>
+					<button id="three" class="col-3 btn btn-lg btn-outline-dark">3</button>
+					<button id="add" class="col-3 btn btn-lg btn-outline-dark">+</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="zero" class="col-6 btn btn-lg btn-outline-dark">0</button>
+					<button id="dec" class="col-3 btn btn-lg btn-outline-dark">.</button>
+					<button id="equals" class="col-3 btn btn-lg btn-outline-dark">=</button>
+				</div> <!-- .row -->
+			</div> <!-- #calculator -->
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+
+	<script>
+
+			/*General user workflow:
+				1. User enters the first number (could be multi-digit),
+				2. User presses an operation (addition, subtraction, multiplication, or division),
+				3. User enters the second number (could be multi-digit),
+				4.User presses = button to see the result.
+				5.User presses AC button to clear the display (show 0).
+		*/
+
+			document.querySelector("#clear").onclick = function(){
+				document.querySelector("#display").value = "0";
+			}
+
+			document.querySelector("#one").onclick = function(){
+				var one = document.querySelector("#display").value;
+					if (one == "0")
+					{
+						document.querySelector("#display").value = "1";
+						
+					}
+					else 
+					{
+						
+						var number_one = one + "1";
+							document.querySelector("#display").value = number_one;
+					}		
+					
+
+			}
+
+
+			document.querySelector("#two").onclick = function(){
+				var two = document.querySelector("#display").value;
+					if (two == "0")
+					{
+						document.querySelector("#display").value = "2";
+						
+					}
+					else 
+					{
+						
+						var number_two = two + "2";
+							document.querySelector("#display").value = number_two;
+					}		
+					
+
+			}
+
+
+			document.querySelector("#three").onclick = function(){
+				var three = document.querySelector("#display").value;
+					if (three == "0")
+					{
+						document.querySelector("#display").value = "3";
+						
+					}
+					else 
+					{
+						
+						var number_three = three + "3";
+							document.querySelector("#display").value = number_three;
+					}		
+					
+
+			}
+
+
+
+			document.querySelector("#four").onclick = function(){
+				var four = document.querySelector("#display").value;
+					if (four == "0")
+					{
+						document.querySelector("#display").value = "4";
+						
+					}
+					else 
+					{
+						
+						var number_four = four + "4";
+							document.querySelector("#display").value = number_four;
+					}		
+					
+
+			}
+
+
+
+			document.querySelector("#five").onclick = function(){
+				var five = document.querySelector("#display").value;
+					if (five == "0")
+					{
+						document.querySelector("#display").value = "5";
+						
+					}
+					else 
+					{
+						
+						var number_five = five + "5";
+							document.querySelector("#display").value = number_five;
+					}		
+					
+
+			}
+
+
+
+
+			document.querySelector("#six").onclick = function(){
+				var six = document.querySelector("#display").value;
+					if (six == "0")
+					{
+						document.querySelector("#display").value = "6";
+						
+					}
+					else 
+					{
+						
+						var number_six = six + "6";
+							document.querySelector("#display").value = number_six;
+					}		
+					
+
+			}
+
+
+			document.querySelector("#seven").onclick = function(){
+				var seven = document.querySelector("#display").value;
+					if (seven == "0")
+					{
+						document.querySelector("#display").value = "7";
+						
+					}
+					else 
+					{
+						
+						var number_seven = seven + "7";
+							document.querySelector("#display").value = number_seven;
+					}		
+					
+
+			}
+
+
+			document.querySelector("#eight").onclick = function(){
+				var eight = document.querySelector("#display").value;
+					if (eight == "0")
+					{
+						document.querySelector("#display").value = "8";
+						
+					}
+					else 
+					{
+						
+						var number_eight = eight + "8";
+							document.querySelector("#display").value = number_eight;
+					}		
+					
+
+			}
+
+
+			document.querySelector("#nine").onclick = function(){
+				var nine = document.querySelector("#display").value;
+					if (nine == "0")
+					{
+						document.querySelector("#display").value = "9";
+						
+					}
+					else 
+					{
+						
+						var number_nine = nine + "9";
+							document.querySelector("#display").value = number_nine;
+					}
+				}		
+					
+
+
+			document.querySelector("#zero").onclick = function(){
+				var zero = document.querySelector("#display").value;
+					if (zero == "0")
+					{
+						document.querySelector("#display").value = "0";
+						
+					}
+					else 
+					{
+						
+						var number_zero = zero + "0";
+							document.querySelector("#display").value = number_zero;
+					}
+				console.log("I work.")
+
+				}
+					
+
+
+
+
+
+			var number;
+
+			var operation;
+
+			document.querySelector("#divide").onclick = function(){
+				number = document.querySelector("#display").value;
+				number = parseInt(number);
+				operation = "/";
+				document.querySelector("#display").value ="0";
+
+			}
+
+			document.querySelector("#multiply").onclick = function(){
+				number = document.querySelector("#display").value;
+				number = parseInt(number);
+				operation = "x";
+				document.querySelector("#display").value ="0";
+
+
+			}
+
+			document.querySelector("#subtract").onclick = function(){
+				number = document.querySelector("#display").value;
+				number = parseInt(number);
+				operation = "-";
+				document.querySelector("#display").value ="0";
+
+
+			}
+
+
+			document.querySelector("#add").onclick = function(){
+				number = document.querySelector("#display").value;
+				number = parseInt(number);
+				operation = "+";
+				document.querySelector("#display").value ="0";
+
+
+			}
+
+
+			document.querySelector("#equals").onclick = function(){
+				var num2 = document.querySelector("#display").value;
+					num2 = parseInt(num2)
+
+					var answer;
+					if (operation == "/"){
+						answer = number/num2;
+
+
+					}
+					else if(operation == "x"){
+						answer = number - num2;
+
+
+					}
+					else if (operation =="+"){
+						answer = number + num2;
+					}
+					else if (operation =="-"){
+						answer = number - num2;
+					}
+
+					document.querySelector("#display").value = answer;
+		
+
+			}
+	
+
+	</script>
+
+
+</body>
+</html>
