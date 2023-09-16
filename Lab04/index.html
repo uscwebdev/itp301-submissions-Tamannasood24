@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Assignment 1 | Image Gallery </title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+</head>
+<style>
+
+.thumbnail {
+	height: 150px;
+	width: 150px;
+	border: 2px black solid;
+	margin-right: 2px;
+}
+
+h1{
+	font-family: 'Righteous', cursive;
+	font-size: 80px;
+	color:;
+
+}
+
+#float{
+	clear:both;
+}
+
+#main_image img {
+	border:2px black solid;
+	height: 785px;
+	width:790px;
+}
+
+#main_image{
+	margin-top:20px;
+}
+
+#caption{
+	font-family:'Righteous', cursive;;
+	font-size: 40px;
+}
+</style>
+
+<body>
+
+<div id="header">
+	<h1> Fruit Gallery </h1>
+</div>
+<div id="float">
+		<img class ="thumbnail" src="img/apple.png" id="apple" alt="Image of clipart smiling red apple.">
+
+		<img class="thumbnail" src="img/banana.png" id="banana" alt="Image of clipart smiling yellow banana.">
+
+		<img class ="thumbnail" src="img/orange.png" id="orange" alt="Image of clipart smiling orange.">
+
+
+		<img class="thumbnail" src="img/strawberry.png" id="strawberry" alt="Image of clipart smiling red strawberry.">
+
+		<img class="thumbnail" src="img/mango.png" id="mngo" alt="Image of clipart smiling yellow mango.">
+	</div>
+	
+	<div id="main_image">
+		<img src="img/mango.png" id="mango" alt="Image of clipart smiling yellow mango.">
+	</div>
+
+	<div id="caption">
+		<p>Image of clipart smiling yellow mango.</p>
+	</div>
+
+
+	
+<script>
+		var fruit = document.querySelectorAll(".thumbnail");
+		console.log(fruit)
+		console.log(fruit.length);
+		console.log(fruit[0]);
+
+		for (var i = 0; i < fruit.length; i++){
+			console.log(i)
+
+			fruit[i].onclick = function(){
+				console.log("box clicked.")
+				console.log(this)
+			
+				var image = this.src;
+				var alt = this.alt;
+			
+				changeMangoImg(image,alt);
+
+
+
+			}
+
+		}
+
+		function changeMangoImg(newSrc, newAlt){
+				document.querySelector("#mango").src = newSrc;
+				document.querySelector("#mango").alt = newAlt;
+				document.querySelector("#caption").innerHTML = newAlt;
+			}
+
+
+
+
+		// document.querySelector("#apple").onclick = function(){
+		// 	document.querySelector("#mango").src = "img/apple.png"
+		// 	document.querySelector("#mango").alt ="Image of clipart smiling red apple"
+		// }
+
+		// document.querySelector("#banana").onclick = function(){
+		// 	document.querySelector("#mango").src = "img/banana.png"
+		// 	document.querySelector("#mango").alt ="Image of clipart smiling yellow banana."
+		// }
+
+		// document.querySelector("#orange").onclick = function(){
+		// 	document.querySelector("#mango").src = "img/orange.png"
+		// 	document.querySelector("#mango").alt ="Image of clipart smiling orange."
+		// }
+
+		// document.querySelector("#strawberry").onclick = function(){
+		// 	document.querySelector("#mango").src = "img/strawberry.png"
+		// 	document.querySelector("#mango").alt ="Image of clipart smiling red strawberry."
+		// }
+
+		// document.querySelector("#peach").onclick = function(){
+		// 	document.querySelector("#mango").src = "img/peach.png"
+		// 	document.querySelector("#mango").alt ="Image of clipart smiling pink peach."
+		// }
+
+		// document.querySelector("#mango").onclick = function(){
+		// 	document.querySelector("#mango").src = "img/mango.png"
+		// 	document.querySelector("#mango").alt ="Image of clipart smiling yellow mango."
+		// }
+
+
+
+	</script>
+
+	
+</body>
+
+
+</html>
