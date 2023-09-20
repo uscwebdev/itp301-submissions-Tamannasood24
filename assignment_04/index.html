@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Assignment 4: Liar's Dice</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+	<style>
+	body{
+		font-family: 'Source Code Pro', monospace;
+	}
+	.dice{
+		margin-right: 5px;
+	}
+	input{
+		height: 30px;
+		width: 100px;
+	}
+	#submit-guess{
+		background-color: blue;
+		color: white;
+		height: 30px;
+		margin-left: 5px;
+		font-family: 'Source Code Pro', monospace;
+	}
+
+	</style>
+	<body>
+		<h1> Liar's Dice </h1>
+		<p> Your Guess: <input type="text" id="guess-input"><button id="submit-guess"> Submit</button></p>	
+
+		<h2>Results: <p id="guess-res"></p></h2>
+		<div id="dice-all">
+			<img src="dice_images/1.png" class="dice" id="dice-1">	
+			<img src="dice_images/2.png" class="dice" id="dice-2">	
+			<img src="dice_images/3.png" class="dice" id="dice-3">
+			<img src="dice_images/4.png" class="dice" id="dice-4">
+			<img src="dice_images/5.png" class="dice" id="dice-5">
+		</div>
+
+
+		<script>
+			
+			
+
+			document.querySelector("#submit-guess").onclick =function(){
+				var guess = document.querySelector("#guess-input").value;
+				guess = parseInt(guess)
+				console.log(guess)
+
+				var numbers = [];
+				for(var i=0; i<5; i++){
+					var randomNum = Math.floor(Math.random() * 6) +1;
+
+					numbers.push(randomNum);
+
+				}
+
+					
+				console.log(numbers);
+
+				var diceImg = document.querySelectorAll("#dice-all img")
+				var diceNum = [];
+
+				console.log(diceImg);
+
+				for(var i=0; i < diceImg.length; i++){
+					diceImg[i].src = "dice_images/" + numbers[i] + ".png"
+
+				}
+
+				var guessResult = document.querySelector("#guess-res")
+
+				if(numbers.includes(guess)){
+					var success = guessResult.innerHTML = "You have guessed correctly!"
+					success = guessResult.style.color = "green";
+				} else {
+					var incorrect = guessResult.innerHTML = "You have guessed incorrectly."
+					success = guessResult.style.color = "red";
+				}
+
+
+			}
+
+
+
+
+			
+
+
+
+
+
+
+		</script>
+	</body>
+</html>
