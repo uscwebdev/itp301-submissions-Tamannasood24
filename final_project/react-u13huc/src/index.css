@@ -1,0 +1,68 @@
+#one img {
+  height: 100px;
+  width: 100px;
+  margin-right: 10px;
+}
+
+#two img {
+  height: 100px;
+  width: 100px;
+  margin-right: 10px;
+}
+
+#three img {
+  height: 100px;
+  width: 100px;
+  margin-right: 10px;
+}
+
+#four img {
+  height: 100px;
+  width: 100px;
+  margin-right: 10px;
+}
+
+#five img {
+  height: 100px;
+  width: 100px;
+  margin-right: 10px;
+}
+
+.Postcard {
+  width: 500px;
+  border: 1px solid black;
+  height: 400px;
+}
+
+.Postcard img {
+  width: 150px;
+  height: auto;
+}
+
+#big_first_pic {
+  width: 600px;
+  height: auto;
+}
+
+button {
+  background-color: #d90368;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Freckle Face', cursive;
+}
+
+button:hover {
+  background-color: #fed766;
+}
+
+#intro {
+  color: white;
+}
+
+#ps {
+  color: white;
+}
